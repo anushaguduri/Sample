@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> forms </title>
+    <style>
+        .a {
+            color: blue;
+        }
+        .b {
+            color: brown;
+        }
+        .c {
+            color: rgb(189, 75, 8);
+        }
+    </style>
+</head>
+<body style="text-align: center;" backgroundcolor="gray">
+    <form name="signin" action="/signin.aspx" target="_self" method="POST">
+        <span class="a"> <label for="fname"> first name</label>
+            <input type="text" id="fname" name="fname" placeholder="your first name">
+            <br> <br>
+            <label for="lname"> last name </label>
+            <input type="text" id="lname" name="lname" placeholder="your last name">
+            <br> <br>
+        </span>
+        <label for="password" style="color: red;">password</label>
+        <input type="password" id="password" name="password" placeholder="your password">
+        <br> <br>
+        <label style="color: rgb(11, 190, 20);"> gender: </label> <br>
+        <span class="b">
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male"> male </label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female"> female </label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other"> other </label>
+            <br> <br>
+        </span>
+        <label style="color: blueviolet;"> languages known </label> <br>
+        <span class="c">
+            <input type="checkbox" id="language" name="language1" value="english">
+            <label for="language1"> english </label>
+            <input type="checkbox" id="language" name="language1" value="hindi">
+            <label for="language1"> hindi </label>
+            <input type="checkbox" id="language" name="language1" value="telugu">
+            <label for="language1"> telugu </label>
+            <br> <br>
+        </span>
+        <label for="jobdescription" style="color: rgb(211, 47, 148);">job description</label>
+        <textarea id="jobdescription" name="jobdescription" rows="5" cols="50"> jobdescription</textarea>
+    </form>
+</body>
+</html>
