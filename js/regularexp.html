@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> regular expressions </title>
+</head>
+
+<body>
+    <div id="ans"></div>
+    <script>
+        var text = "Lorem ipsum dolor sit amet consectetur adipisicing elit Corporis enim a Lorem ipsum dolor sit ";
+        var val = text.search(/dolor/i);
+        var val = text.replace(/lorem/gi, "font")
+        document.getElementById("ans").innerHTML = val;
+
+    </script>
+</body>
+
+</html>

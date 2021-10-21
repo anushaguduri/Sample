@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> selectforms </title>
+</head>
+
+<body>
+    <form name="signin" action="/signin.aspx" target="_self" method="POST">
+        <br>
+        <label for="qualifications"> choose a qualification:</label>
+        <select id="qualifications" name="qualifications" size="3">
+            <option value="BSC"> BSC </option>
+            <option value="BCom"> BCom </option>
+            <option value="BZA"> BZA </option>
+            <option value="BCA"> BCA </option>
+        </select>
+        <br><br>
+
+        <label for="photo"> upload photo:</label>
+        <input type="file" id="photo" name="photo">
+        <br><br>
+
+        <label for="dob">dob:</label>
+        <input type="date" id="dob" name="dob">
+        <br><br>
+
+        <label for="clr">choose color:</label>
+        <input type="color" id="clr" name="clr">
+        <br><br>
+
+        <input type="submit" name="submit" value="submit">
+        <input type="reset" name="reset" value="reset">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> validation </title>
+    <script>
+        function validate() {
+            var val = true;
+
+            //
+            var fname = document.forms["registrationform"]["firstname"].value;
+            if (fname != "" && parseInt(fname.length) <= 8) {
+                document.getElementById("fnameerror").style.display = "none";
+            }
+            else {
+                document.getElementById("fnameerror").style.display = "block";
+                return false;
+            }
+
+            //
+            var lname = document.forms["registrationform"]["lastname"].value;
+            if (lname != "" && parseInt(lname.length) > 4) {
+                document.getElementById("lnameerror").style.display = "none";
+            } else {
+                document.getElementById("lnameerror").style.display = "block";
+                return false;
+            }
+
+            //
+            var rank = document.forms["registrationform"]["rank"].value;
+            if (rank <= 10) {
+                document.getElementById("rankerror").style.display = "none";
+            } else {
+                document.getElementById("rankerror").style.display = "block";
+                return false;
+            }
+
+
+            //
+            var password = document.forms["registrationform"]["password"].value;
+            if (password != "" && parseInt(password.length) <= 6) {
+                document.getElementById("passworderror").style.display = "none";
+            } else {
+                document.getElementById("passworderror").style.display = "block";
+                return false;
+            }
+
+            //
+            var confirmpassword = document.forms["registrationform"]["confirmpassword"].value;
+            if (password == confirmpassword) {
+                document.getElementById("confirmpassworderror").style.display = "none";
+            } else {
+                document.getElementById("confirmpassworderror").style.display = "block";
+                return false;
+            }
+
+
+            //
+            var email = document.forms["registrationform"]["emailaddress"].value;
+            var emailfilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (email == "") {
+                document.getElementById("emailaddresserror").style.display = "block";
+            } else if (!emailfilter.test(email)) {
+                document.getElementById("emailaddresserror").style.display = "block";
+            } else {
+                document.getElementById("emailaddresserror").style.display = "none";
+            }
+
+
+            //
+            var qualifications = document.forms["registrationform"]["qualifications"].value;
+            if (qualifications != "") {
+                document.getElementById("qualificationserror").style.display = "none";
+            } else {
+                document.getElementById("qualificationserror").style.display = "block";
+                return false;
+            }
+
+
+            //
+            var eng = document.forms["registrationform"]["language"][0].checked;
+            var hin = document.forms["registrationform"]["language"][1].checked;
+            var tel = document.forms["registrationform"]["language"][2].checked;
+            if (eng || hin || tel) {
+                document.getElementById("languageerror").style.display = "none";
+            } else {
+                document.getElementById("languageerror").style.display = "block";
+                return false;
+            }
+
+            //
+            var male = document.forms["registrationform"]["gender"][0].checked;
+            var female = document.forms["registrationform"]["gender"][1].checked;
+            var others = document.forms["registrationform"]["gender"][2].checked;
+            if (male || female || others) {
+                document.getElementById("gendererror").style.display = "none";
+            } else {
+                document.getElementById("gendererror").style.display = "block";
+                return false;
+            }
+
+            return val;
+        }
+    </script>
+    <style>
+        span {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form name="registrationform" action="/signin.aspx" target="_blank" method="POST" onsubmit="return validate()">
+
+        <label for="firstname"> first name</label>
+        <input type="text" id="firstname" name="firstname" oninput="validate()" placeholder="your first name">
+        <span id="fnameerror">
+            plz enter fname <br>
+            fname should b min 8 chars
+        </span>
+        <br> <br>
+        <label for="lastname"> last name </label>
+        <input type="text" id="lastname" name="lastname" oninput="validate()" placeholder="your last name">
+        <span id="lnameerror">
+            plz enter lname <br>
+            fname should b min 4 chars
+        </span>
+        <br> <br>
+        <label>rank</label>
+        <input type="text" name="rank" id="rank" oninput="validate()">
+        <span id="rankerror">
+            plz enter digits <br>
+            should b min 10
+        </span>
+        <br><br>
+
+        <label for="password">password</label>
+        <input type="password" id="password" name="password" oninput="validate()">
+        <span id="passworderror">
+            plz enter pswd <br>
+            should b min 6
+        </span>
+        <br> <br>
+        <label for="confirmpassword"> confirm password</label>
+        <input type="password" id="confirmpassword" name="confirmpassword" oninput="validate()">
+        <span id="confirmpassworderror">
+            plz enter digits <br>
+            should b as same as password
+        </span>
+        <br> <br>
+
+        <label>email</label>
+        <input type="text" name="emailaddress" id="emailaddress" oninput="validate()">
+        <span id="emailaddresserror">
+            plz enter valid email <br>
+        </span>
+        <br><br>
+
+        <label for="qualifications"> choose a qualification:</label>
+        <select id="qualifications" name="qualifications" onclick="validate()">
+            <option value=""> please select </option>
+            <option value="BSC"> BSC </option>
+            <option value="BCom"> BCom </option>
+            <option value="BZA"> BZA </option>
+            <option value="BCA"> BCA </option>
+        </select>
+        <span id="qualificationserror">
+            please select qualifications<br>
+        </span>
+        <br><br>
+
+        <label>lan</label> <br>
+        <input type="checkbox" id="language" name="language1" value="language1" onclick="validate()">
+        <label for="language1"> english </label>
+        <input type="checkbox" id="language" name="language1" value="language1" onclick="validate()">
+        <label for="language1"> hindi </label>
+        <input type="checkbox" id="language" name="language1" value="language1" onclick="validate()">
+        <label for="language1"> telugu </label>
+        <span id="languageerror">
+            please select language<br>
+        </span>
+        <br> <br>
+
+        <label> gender: </label> <br>
+        <input type="radio" id="male" name="gender" value="gender" onclick="validate()">
+        <label for="male"> male </label>
+        <input type="radio" id="female" name="gender" value="gender" onclick="validate()">
+        <label for="female"> female </label>
+        <input type="radio" id="other" name="gender" value="gender" onclick="validate()">
+        <label for="other"> other </label>
+        <span id="gendererror">
+            please select gender<br>
+        </span>
+        <br> <br>
+
+        <input type="submit" name="submit" value="submit">
+    </form>
+</body>
+
+</html>

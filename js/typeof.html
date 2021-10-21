@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> typeof </title>
+</head>
+
+<body>
+       <!-- <div id="result"></div> -->
+ 
+       <div id="showresults"></div>
+
+    <!-- <script>
+        document.getElementById("result").innerHTML =
+            typeof "anu" + "<br>" +
+            typeof "15" + "<br>" +
+            typeof "true" + "<br>" +
+            typeof "[1, 2, 3, 4]" + "<br>" +
+
+
+            typeof 10.20 + "<br>" +
+            typeof anu + "<br>" +
+            typeof { fname: "anu" } + "<br>" +
+            typeof true + "<br>" +
+            typeof [1, 2, 3, 4] + "<br>";
+    </script> -->
+
+    <script>
+        document.getElementById("showresults").innerHTML =
+            typeof Number("20") + "<br>" +
+            typeof Number("anu") + "<br>" +
+            typeof String(20) + "<br>" +
+            typeof String("anu") + "<br>" +
+            typeof (20).toString() + "<br>" +
+            typeof Boolean({ fname: "anu" }) + "<br>" +
+            typeof Boolean([1, 2, 3, 4]) + "<br>";
+
+    </script>
+</body>
+
+</html>

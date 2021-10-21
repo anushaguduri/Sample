@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background: #000;
+    font-family: sans-serif;
+}
+.main
+{
+    width: 60%;
+    margin: 24% auto;
+    position: relative;
+}
+#slider
+{
+    width: 100%;
+    height: 7px;
+    outline: none;
+    border-radius: 3px;
+}
+#slider : : ::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width:48px;
+    height: 48px;
+    cursor: pointer;
+    Z-index: 3;
+    position: relative;
+}
+#selector
+{
+    height: 104px;
+    width: 48px;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.selectBtn
+{
+    height: 48px;
+    width: 48px;
+    background-image:url(a.jpg) ;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0%;
+    
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        * {
+            font-family: sans-serif;
+            color: black;
+            /* overflow-y: hidden; */
+        }
+
+        /* @media only screen and (max-width:600px) {
+            .center {
+                width: 50%;
+            }
+        } */
+
+
+        .split {
+            height: 100%;
+            width: 25%;
+            position: fixed;
+            top: 0;
+            overflow: hidden;
+            padding-top: 20px;
+        }
+
+        .center h5 {
+            float: right;
+            top: 0;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            right: 25%;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .middle {
+            margin-top: 100px;
+            left: 30%;
+            overflow: hidden;
+        }
+
+        .middle h5 {
+            margin-left: 100px;
+
+        }
+
+        .info {
+            float: right;
+        }
+
+        .sub {
+            background-color: #0cfce8;
+            border: none;
+            height: 40px;
+            color: black;
+            width: 220px;
+
+        }
+
+        .center img {
+            width: 100px;
+        }
+
+        .middle h2 {
+            text-align: center;
+        }
+
+        .min {
+            width: 1000px;
+            height: 500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 1px 4px 22px -8px #0004;
+            /* display: flex; */
+        }
+
+        .mini {
+            background: linear-gradient(to right, #0cfce8 45%, #ffffff 25%, #f6f7f6 50%, #faf9f9 100%);
+            height: 700px;
+            width: 100%;
+            position: relative;
+        }
+
+        .mail {
+            width: 200px;
+            border: 1px solid grey;
+            color: lightgray;
+            padding: 8px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .pass {
+            width: 200px;
+            border: 1px solid grey;
+            color: lightgray;
+            padding: 8px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        @media only screen and (max-width:600px) {
+            .center {
+                /* width: 50%; */
+                left: 70%;
+            }
+
+            /* .middle {
+                left: 20%;
+            } */
+       .left{
+          left:  200px;
+       }
+       .right{
+           right: 5%;
+       }
+       .mini{
+           height: 600px;
+       }
+
+
+        }
+        @media only screen and (max-width:920px) {
+            .center {
+                /* width: 50%; */
+                left: 70%;
+            }
+
+            /* .middle {
+                left: 20%;
+            } */
+       .left{
+          left:  150px;
+       }
+       .right{
+           right: 5%;
+       }
+       .mini{
+           height: 600px;
+       }
+
+        }
+
+
+        
+        </style>
+</head>
+
+<body>
+    <div class="res">
+        <div class="mini">
+            <div class="min">
+                <div class="split left">
+                    <div class="center">
+                        <img src="../car.png " alt="Avatar woman">
+                        <pre> India's first water 
+car cleaning company</pre>
+                    </div>
+                </div>
+                <div class="split right">
+                    <h5 class="info">Need help ?</h5>
+                    <div class="middle">
+                        <h2>Log in</h2>
+                        <form>
+                            <label for="email">Email</label><br>
+                            <input class="mail" type="email" id="email" name="email" placeholder="joe@email.com">
+                            <br><br>
+                            <label for="password">Password</label><br>
+                            <input class="pass" type="password" id="password" name="password" placeholder="Enter Your Password">
+                            <h5>Forgot Password?</h5>
+                            <input type="submit" class="sub" value="Login">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

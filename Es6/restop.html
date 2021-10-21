@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> operators </title>
+</head>
+
+<body>
+    <script>
+        // task 1
+        /* add = (...args) => {
+            let sum = 0;
+            for (let element of args) {
+                sum = sum + element;
+            }
+            console.log(sum);
+        }
+        add(90, 89, 56, 45); */
+        var num = [90, 89, 56, 45]
+        let add = num.reduce((total, val) => {
+            return total + val;
+        });
+        console.log(add);
+        
+        // task 2
+        var num = [90, 89, 56, 45, 0]
+        var numValues = num.map((val) => {
+            if (val === 0) {
+                console.log("neither odd nor even");
+            }
+            else if (val % 2 == 0) {
+                console.log("even");
+            }
+            else {
+                console.log("odd");
+
+            }
+            // return val;
+        });
+        // console.log(numValues);
+
+        // task 3
+        let arr = [{ salary: 56000 }, { salary: 90000 }];
+        let sum = arr.reduce((total, num) => {
+            return total.salary + num.salary;
+        });
+        console.log(sum);
+
+        // task 4
+        class Plant {
+            constructor(grow) {
+                this.grow = "length";
+            }
+            Water() {
+                console.log("need water");
+            }
+        }
+        class Apple extends Plant {
+            constructor(grow, water, fertilizers) {
+                super(grow);
+                this.grow = grow;
+            }
+        }
+        const plantData = new Plant();
+        console.log(plantData);
+        plantData.Water();
+    </script>
+</body>
+
+</html>

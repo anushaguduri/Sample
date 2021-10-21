@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> media </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        @media only screen and (max-width:600px) {
+            .b {
+                float: left;
+                width: 25%;
+            }
+        }
+
+        @media only screen and (min-width:600px) {
+            .b {
+                float: inherit;
+                width: 50%;
+            }
+        }
+
+        @media only screen and (min-width:768px) {
+            .b {
+                float: right;
+                width: 100px;
+            }
+        }
+
+        @media only screen and (min-width:1200px) {
+            .b {
+                float: inline-start;
+                width: 60%;
+            }
+        }
+
+        @media only screen and (min-width:1500px) {
+            .b {
+                float: inline-end;
+                width: 500px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1> html, css responsive </h1>
+    <div class="a">
+        <div class="b" style="background-color: blue;">
+            <h2> column 1 </h2>
+            <P> Lorem ipsum, dolor sit amet </P>
+        </div>
+    </div>
+    <div class="a">
+        <div class="b" style="background-color: rgb(255, 0, 191);">
+            <h2> column 2 </h2>
+            <P> Lorem ipsum, dolor sit amet </P>
+        </div>
+    </div>
+    <div class="a">
+        <div class="b" style="background-color: rgb(255, 0, 0);">
+            <h2> column 3 </h2>
+            <P> Lorem ipsum, dolor sit amet </P>
+        </div>
+    </div>
+    <div class="a">
+        <div class="b" style="background-color: rgb(208, 255, 0);">
+            <h2> column 4 </h2>
+            <P> Lorem ipsum, dolor sit amet </P>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> errors </title>
+</head>
+<body>
+    <div id="msg"></div>
+    <script>
+        /*  try {
+             alert("hello")
+         }
+        */
+
+        try {
+            alet("hello")
+        }
+        catch (err) {
+            document.getElementById("msg").innerHTML = err.message;
+        }
+    </script>
+</body>
+</html>

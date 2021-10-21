@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> example </title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <script>
+        let players = [
+            { isReady: true },
+            { isReady: true },
+            { isReady: true }]
+        const isPlayersReady = players.every(data => data.isReady)
+        if (isPlayersReady) {
+            startGame()
+        }
+        let result = players.map(a => a.isReady);
+        console.log(new Set(result).size === 1);
+    </script>
+</body>
+
+</html>

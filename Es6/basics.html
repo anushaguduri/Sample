@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> day 1 </title>
+</head>
+
+<body>
+    <script>
+        // round off all the decimal numbers in an array and sum all the values
+
+        var num = [10.5, 15.6, 8.1];
+        var sum = num.reduce((total, num) => {
+            return Math.round(total + num);
+
+        });
+
+        console.log(sum);
+
+        // check if all the property values in an array of object is same or not
+
+        var person = [{ firstName: 'alina', age: 89 }, { firstName: 'alina', age: 70 }, { firstName: 'alina', age: 78 }];
+        let x = person[0].firstName;
+        var count = 0;
+        var persons = person.map((person) => {
+            if (x === person.firstName) {
+                count++;
+            }
+            // else {
+            //     console.log("Object not found.");
+            // }
+            return count;
+        });
+        if (persons == person.length) {
+            console.log("same");
+        }
+        else {
+            console.log(" not same");
+        }
+
+        //get the value of the first element in an array that has value greater than 20
+
+        var num = [1, 19, 24, 30, 50];
+        var findResult = num.find(val => {
+            return val >= 20;
+        });
+        console.log(findResult);
+
+
+        // get the value of the first element in an array that has value less than 2
+
+        var numb = [10, 1, 2, 3];
+        var result = num.find(val => {
+            return val <= 2;
+        });
+        console.log(result);
+
+
+
+        // filter data based on a id(property) in an array of objects
+
+        var result = person.filter(val => {
+            return val.age < 70;
+
+        });
+        console.log(result);
+
+    </script>
+</body>
+
+</html>

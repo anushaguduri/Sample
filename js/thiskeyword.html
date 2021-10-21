@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> thiskeyword </title>
+</head>
+
+<body>
+    <script>
+        console.log("global this", this)
+
+
+        function myfun() {
+            var x = 10;
+            var y = 15;
+            console.log("infunction this", this);
+        }
+        myfun();
+
+
+
+        var myobj = {
+            student: "anu", batch: "june", year: "2021",
+            studentdetails: function () {
+                // console.log("infunction this", this);
+                return this.student + " is in " + this.batch + " batch ";
+            }
+        }
+        var studentname = myobj.studentdetails();
+        console.log(studentname);
+
+    </script>
+</body>
+</html>

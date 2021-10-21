@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> attribute selector </title>
+    <style>
+        a[traget="_blank"] {
+            background: coral;
+        }
+        a[href="#"] {
+            color: rgb(241, 28, 28);
+        }
+        [title~=sample]{
+            background: darkgoldenrod;
+        }
+        [src] {
+background-color: black;
+border: 2px solid black;
+        }   
+        </style>
+</head>
+<body>
+    <a href="#" target="_blank"> bg</a>
+    <a href="#a">clr </a>
+    <a href="#" target="_blank"> bgclr</a>
+    <div title="div sample"> sam</div>
+    <div title="sample">samp </div>
+    <img src="../images/b.jfif"> 
+</body>
+</html>

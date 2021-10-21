@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> inheritance</title>
+</head>
+
+<body>
+    <script>
+
+        // parent: animal(speak, walk, climb, fly)  child:dog(eat), child:crow()
+        class Animal {
+            constructor(id) {
+                this.id = "speak";
+            }
+        }
+        class Dog extends Animal {
+            constructor(id) {
+                super(id);
+                this.id = id;
+            }
+        }
+        class Crow extends Animal {
+            constructor(fly) {
+                this.id = "fly";
+            }
+        }
+        const myDog = new Dog("eat");
+        console.log(myDog);
+        const myAnimal = new Animal();
+        console.log(myAnimal);
+
+    </script>
+
+
+
+    <!-- get all the person name based on age greater than and equal to 18, eligible to vote  -->
+    <script>
+        var mem = [{ firstName: 'joe', age: 24 },
+        { firstName: 'alina', age: 12 },
+        { firstName: 'ana', age: 22 },
+        { firstName: 'alex', age: 20 }]
+
+        var memVal = mem.map(val => {
+            if (val.age >= 18) {
+                console.log(val.firstName + " is eligible to vote  " );
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

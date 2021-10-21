@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div.parent {
+            background-color: blanchedalmond;
+            border: 3px solid #73AD21;
+            height: 1000px;
+        }
+        div.fixed {
+            border: 3px solid #73AD21;
+            position: fixed;
+            width: 500px;
+            bottom: 10px;
+            right: 2px;
+            height: 50px;
+            background-color: blanchedalmond;
+        }
+        div.relative {
+            position: relative;
+            width: 400px;
+            height: 200px;
+            border: 3px solid #73AD21;
+            background-color: blanchedalmond;
+        }
+        div.absolute {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid #73AD21;
+            background-color: blanchedalmond;
+        }
+        div.sticky {
+            border: 3px solid #73AD21;
+            top: 100px;
+            padding: 20px;
+            width: 200px;
+            background-color: blanchedalmond;
+            position: sticky;
+        }
+    </style>
+</head>
+<body>
+    <h2>position </h2>
+    <div class="parent">
+        <div class="sticky"> sticky </div>
+        <div class="relative"> relative
+            <div class="absolute"> absolute</div>
+        </div>
+        <div class="fixed"> fixed </div>
+    </div>
+</body>
+</html>

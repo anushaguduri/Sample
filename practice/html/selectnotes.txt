@@ -1,0 +1,44 @@
+Kalyan Kumar09:07
+    <form>
+        <fieldset>
+         <legend>Student Information1</legend>
+         <label for="fname">First name:</label>
+         <input type="text" id="fname" name="fname"><br><br>
+         <label for="lastname">Last name:</label>
+         <input type="text" id="lastname" name="lastname"><br><br>
+         <label for="password">Password:</label>
+         <input type="password" id="password" name="password"><br><br>
+         <label>Gender:</label>
+         <input type="radio" id="male" name="
+gender" value="male">
+         <label for="male">Male</label>
+         <input type="radio" id="female" name="gender" value="female">
+         <label for="female">Female</label>
+         <input type="radio" id="others" name="gender" value="others">
+         <label for="others">Others</label><br><br>
+         <input type="button" name="Submit" value="Submit Student Info" /><br><br>
+        </fieldset>
+Dropdown code
+<label for="mobilebrands">Choose a mobile:</label>
+         <select id="mobilebrands" name="mobilebrands" size="3" multiple> 
+            <option value="Iphone">Apple Iphone</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Oneplus">Oneplus</option>
+            <option value="Pixel">Pixel</option>
+            <option value="Nokia">Nokia</opton>
+            <option value="RealMe">RealMe</option>
+         </select><br><br>
+Kalyan Kumar09:08
+other fields
+<label for="photo">Upload Photo:</label>
+         <input type="file" id="photo" name="photo"/><br><br>
+         <label for="resume">Upload Resume:</label>
+         <input type="file" id="resume" name="resume"/><br><br>
+         <label for="birthday">Birthday: </label>
+         <input type="date" id="birthday" name="birthday"/><br><br>
+         <label for="favcolor">Select your favourite color:</label>
+         <input type="color" id="favcolor" name="favcolor"/><br><br>
+         <input type="hidd
+en" name="userid" value="500"/>
+         <input type="submit" name="Submit" value="Click Me!" />
+         <input type="reset"/>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> creating object </title>
+</head>
+
+<body>
+
+    <script>
+        class Shape {
+            constructor(name) {
+
+                this.name = name;
+                this.shape = "square";
+            }
+
+            edges() {
+                console.log("edges of " + this.shape + " is 4");
+                console.log("edges of " + this.name + " is 0");
+
+
+
+            }
+            area() {
+                console.log("area of " + this.shape + " is a2");
+                console.log("area of " + this.name + " is 3.14 r");
+            }
+        }
+
+        const shapesName = new Shape('circle');
+        const shapesName1 = new Shape('triangle');
+
+        console.log(shapesName);
+        console.log(shapesName1);
+
+        shapesName.edges();
+
+        shapesName.area();
+
+
+    </script>
+</body>
+
+</html>

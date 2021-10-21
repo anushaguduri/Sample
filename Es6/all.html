@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> ES6 </title>
+</head>
+
+<body>
+    <script>
+
+        // var, let, const
+        //global scope
+        var x = 10;//number
+        var firstName = 'alex';//string
+
+        {
+            // block scope
+            //code of block
+            let firstName = 'alina';//redeclaration  //local scope
+            let y = 20;
+            console.log(firstName);//alina
+            console.log(y);
+            console.log(x);
+        }
+
+        console.log(firstName);//alex
+        // console.log(y);
+
+
+        var ageVal = 20;
+        ageVal = 30;
+        console.log(ageVal);//30
+
+        // const: constant value
+        //block scope
+        const age = 20;
+        // age = 22;
+        console.log(age);//reference & value
+
+        const arr = [10, 90, 89];
+        // arr = [88, 90, 67];//wrong 
+        arr[0] = 56;
+        arr[1] = 56;
+        console.log(arr);//changing the value not the reference
+
+
+        // arrow function/ fat arrow
+        function add() {
+            console.log(10 + 90.88);
+            // console.log(this);//document
+        }
+
+        add();
+
+        // arrow function / fat arrow
+        add = () => {
+            console.log(10 + 90);
+            // console.log(this);
+        }
+
+        add();
+
+        // this keyword
+        console.log(this);
+
+        let person = {
+            firstName: 'alina',
+            age: 89,
+            add: function () {
+                return this.firstName;//correct
+            }
+        }
+
+        // person.add();
+        // document.person.add();
+
+        // default function arguments
+        subtract = (x, y = 2) => {
+            return x - y;
+        }
+
+        var sub = subtract(4);//passing function as a value
+        console.log(sub);
+
+        // array helper function
+
+        // map
+        // array elements 1 89 78 90
+        // index value 0 1 2 3
+        // length 4
+
+        var num = [1, 89, 78, 90];//creating an array of numbers
+        var colors = ['pink', 'yellow'];//array of strings
+        var employeeData = [{ firstName: 'alina', age: 89 }, { firstName: 'alex', age: 70 }, { firstName: 'joe', age: 78 }];//array of objects
+
+        // syntax
+        // arrayname.map(callback function(array elements, index, num))
+
+        // older version of function
+        // num.map(function (val, index, num) {
+        // return val;
+        // });
+
+        // es6
+        var numValues = num.map((val, index, num) => {
+            // conditional statements
+            // if(val % 2 == 0) {
+
+            // }
+            return val;
+        });
+
+        console.log(numValues);
+
+        // for loop
+        // for(var i =0 ; condition; i++) {
+        //     // conditional statements
+        //     if() {
+        // console.log(num[i]);
+        //     }
+        //     else {
+
+        //     }
+        // }
+
+
+        // filter
+        // num = [1, 89, 78, 90]
+        // var result = num.filter(function () {
+
+        // })
+
+        var result = num.filter(val => {
+            return val <= 10;
+        });
+
+        console.log(result);
+
+        // forEach
+        // colors.forEach(function () {
+
+        // });
+
+        colors.forEach(color => {
+            console.log(color);
+        });
+
+        // find
+        // num = [1, 89, 78, 90]
+        // num.find(function () {
+
+        // });
+
+        var findResult = num.find(val => {
+            return val >= 70;
+        });
+
+        console.log(findResult);
+
+        // reduce
+        // num = [1, 89, 78, 90]
+        var sumVal = num.reduce((total, num) => {
+            //console.log(total); //1 undefined undefined
+            //console.log(num); //89 78 90 
+            return total + num;
+        });
+
+        console.log(sumVal);
+
+        // some: returns a boolean 
+        var ages = [4, 20, 1, 90];
+
+        var eligibility = ages.some(age => {
+            return age >= 18;
+        });
+
+        console.log(eligibility);
+
+        // every: return a boolean 
+        // ages = [4, 20, 9, 90];
+        var everyEligible = ages.every(age => {
+            return age >= 4;
+        });
+
+        console.log(everyEligible);
+
+        // task
+        // use es6
+        // round off all the decimal numbers in an array and sum all the values
+        //check if all the property values in an array of object is same or not
+        //get the value of the first element in an array that has value greater than 20
+        // get the value of the first element in an array that has value less than 2
+        // filter data based on a id(property) in an array of objects
+
+
+        // class: template for js objects
+
+        var x = 10;//declaration & initialization
+
+        class University {
+            // constructor is used to intialize the value
+
+            constructor(dept, first) {
+                this.department = dept;
+                this.firstName = first;
+                this.age = 20;
+            }
+
+            library() {
+                console.log(this.department);
+                console.log('has access to library');
+            }
+
+            sports() {
+                console.log('has access to sports department');
+            }
+        }
+
+        const student_one = new University('cse', 'alex');//create object to refer to class
+        console.log(student_one);
+        student_one.library();
+
+        const student_two = new University('ece', 'alina');
+        console.log(student_two);
+        student_two.sports();
+
+        class Colors {
+            constructor(name) {
+                this.color = "pink";
+                this.name = name;
+            }
+
+            // intensity() {
+            //     console.log(this.color);
+            //     console.log("Intensity of " + this.color + " is 2");
+            // }
+        }
+
+        const colorName = new Colors("red");
+        // console.log(colorName.color);
+        // colorName.intensity();
+
+        // task
+        // create a class Shape, create different types of shapes as objects 
+        // think about methods that you can inculde
+
+        // inheritance
+        // class Parent {
+        // }
+        // class Child extends Parent {
+        // }
+
+        // parent class
+        class Shape {
+            constructor(sId) {
+                // sId = 20;
+                this.id = 20;
+            }
+
+            shapeData() {
+                console.log("shapeData");
+            }
+        }
+
+        class Square extends Shape {
+
+        }
+
+        // derived/child class
+        class Circle extends Shape {
+            constructor(id, radius) {
+                super(id);//call the constructor of parent class
+                // this.id = id;
+                this.radius = radius;
+            }
+
+            circleData() {
+                console.log("circleData");
+            }
+        }
+
+        const myCircle = new Circle(10, 5);//id radius
+        console.log(myCircle);//10 5
+        myCircle.circleData();//
+        myCircle.shapeData();//
+
+        const shape = new Shape();
+        shape.shapeData();//
+        //shape.circleData();//give you an error
+
+
+        // enhanced object literal
+
+        // create a object earlier
+        // var person = {
+        //     firstName : "Duke",
+        //     designation : "developer",
+        //     age : 25,
+        //     fullName = function () {
+        //     console.log(this.firstName);
+        // }
+        // }
+
+        // restructuring of object
+        var firstName = "Duke";
+        var designation = "developer";
+        var ageVal = 25;
+
+        // var fullName = function () {
+        //     console.log(firstName);
+        // }
+
+        fullName = () => {
+            console.log(firstName)
+        }
+
+        var user = {
+            firstName,
+            designation,
+            ageVal,
+            fullName
+        }
+
+        console.log(user);
+
+        // New syntax without function keyword for object method
+
+        var employee = {
+            id: 2,
+            salary: 200000,
+            information() {
+                console.log(this.salary);
+            }
+        }
+
+        employee.information();
+
+        // destructuring of object
+        const { id, salary } = employee;
+        console.log(id);//
+        console.log(salary);//
+
+// task
+// parent: animal(speak, walk, climb, fly)  child:dog(eat), child:crow()
+//get all the person name based on age greater than and equal to 18, eligible to vote 
+// [{
+//     firstName: 'joe',
+//     age: 24
+// }, {
+//     firstName: 'alina',
+//     age: 12
+// },
+// {
+//     firstName: 'alex',
+//     age: 20
+// }
+// ]
+
+    </script>
+</body>
+
+</html>

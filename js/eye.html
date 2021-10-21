@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eye</title>
+</head>
+
+<body>
+    <script>
+        $(".toggle-password").click(function () {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
+    </script>
+
+    <form class="form-horizontal" method="" action="">
+        <label>Password</label>
+        <input id="password-field" type="password" class="form-control" name="password" value="secret">
+        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+    </form>
+
+
+</body>
+
+</html>

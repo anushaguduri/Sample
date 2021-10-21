@@ -1,0 +1,24 @@
+Kalyan Kumar07:12
+Write an HTML code to form a table to show the below values in a tabular form with heading as Roll No., Student name, Subject Name, and values as
+
+Vishnu, Physics
+Anusha, Maths
+Raveendra, Chemistry
+
+Kalyan Kumar07:26
+2. Write an HTML code to create heading tags and show us the diff between inline, intenal and external css.
+
+Kalyan Kumar07:43
+3. Write an HTML Code to show the differences between Block and Inline elements.
+
+Kalyan Kumar07:55
+4. Write an HTML code to display an image from the folder img.
+
+Kalyan Kumar08:08
+5. Write HTML code to format the text using fromatting elements.
+
+Kalyan Kumar08:18
+6. Write an HTML code to display Ordered, Unordered and Descriptive lists.
+
+Kalyan Kumar08:36
+7. Write an HTML code to show Semantic and Non-Semantic Elements

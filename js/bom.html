@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> BOM </title>
+</head>
+
+<body>
+    <script>
+        window.open("https://www.google.com/")
+        // window.close();
+        window.alert(" BOM alert ");
+        Window.confirm(" want to continue ");
+        console.log('innerHeight ', window.innerHeight)
+        console.log('innerWidth ', window.innerWidth)
+
+        function goback() {
+            alert('hai');
+            console.log("test")
+        }
+        setTimeout(function () {
+            goback()
+        }, 1000);
+    </script>
+</body>
+
+</html>

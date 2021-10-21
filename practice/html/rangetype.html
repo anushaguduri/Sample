@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> range type </title>
+        <link rel="stylesheet" href="/css/range.css">
+    </head>
+    <body> 
+        <div class="main">
+            <input type="range" min="0" max="200" value="50" id="slider">
+            <div id="selector"> 
+            <div class="selectBtn"> </div>
+        </div>
+        </div>
+
+        <script>
+            var slider=document.getElementById("slider")
+            var selector=document.getElementById("selector")
+
+            slider.oninput=function()
+            {
+                selector.style.left=this.value + "%";
+                
+            }
+        </script>
+
+    </body>
+</html>
+
+
